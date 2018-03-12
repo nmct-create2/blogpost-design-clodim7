@@ -56,15 +56,22 @@ html {
     /*font-family: "Helvetica Neue", Helvetica, arial, sans-serif;*/
     /* STAP 4 aanpassen naar kleur paragraaf */
     color: #5C6366;
-    padding: 48px 24px 24px;
+    /*padding: 48px 24px 24px; */
+    box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*
 body {
     max-width: 42em;
     margin: 0 auto;
 }
+ */
 
 /*
  * Remove text-shadow in selection highlight:
@@ -240,6 +247,32 @@ a:hover, a:focus {
     margin-top: 4px;
 }
 
+@media (min-width: 768px) {
+    .c-article__header {
+        padding: 48px 48px 24px;
+    }
+    .c-article__author {
+        padding-bottom: 24px;
+    }
+    .c-article__body {
+        padding: 24px 48px;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-article__body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .c-article__author {
+        width: 25%;
+        padding-right: 24px;
+    }
+    .c-article__content {
+        width: 75%;
+    }
+}
+
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {}
@@ -248,12 +281,22 @@ a:hover, a:focus {
 
 @media (min-width: 768px) {
     html {
-        padding: 48px 48px 24px;
+        /* padding: 48px 48px 24px;*/
     }
     h1 {
         font-size: 58px;
         line-height: 64px;
     }
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements.
+*/
+
+.u-max-width-sm {
+    max-width: 36em;
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
