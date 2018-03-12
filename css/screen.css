@@ -8,7 +8,8 @@ html {
     font-size: 16px;
     line-height: 1.5;
     font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
-    color: #111;
+    /*aanpassen naar kleur paragraaf */
+    color: #5C6366;
     padding: 48px 24px 24px;
 }
 
@@ -53,10 +54,16 @@ img {
     Default markup for typographic elements
 */
 
+h1, h2, h3 {
+    /*kleur overnemen van de titel*/
+    color: #17181A;
+    font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
 h1 {
-    font-family: "Times New Roman", serif;
+    /*font-family: "Times New Roman", serif;*/
     font-size: 36px;
-    font-weight: normal;
+    /*font-weight: normal;*/
     line-height: 40px;
     margin: 0 0 24px;
 }
@@ -73,31 +80,21 @@ h3 {
     margin: 0 0 24px;
 }
 
-h4,
-h5,
-h6 {
+h4, h5, h6 {
     font-size: 16px;
     line-height: 24px;
     margin: 0 0 24px;
 }
 
-p,
-ol,
-ul,
-dl,
-table,
-address,
-figure {
+p, ol, ul, dl, table, address, figure {
     margin: 0 0 24px;
 }
 
-ul,
-ol {
+ul, ol {
     padding-left: 24px;
 }
 
-li ul,
-li ol {
+li ul, li ol {
     margin-bottom: 0;
 }
 
@@ -133,13 +130,11 @@ a {
     transition: all .1s ease-in-out;
 }
 
-a:visited,
-a:active {
+a:visited, a:active {
     color: BlueViolet;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
     color: Crimson;
 }
 
@@ -175,9 +170,7 @@ a:focus {
 */
 
 @media print {
-    *,
-    *:before,
-    *:after {
+    *, *:before, *:after {
         background: transparent !important;
         color: #000 !important;
         /* Black prints faster:
@@ -185,8 +178,7 @@ a:focus {
         box-shadow: none !important;
         text-shadow: none !important;
     }
-    a,
-    a:visited {
+    a, a:visited {
         text-decoration: underline;
     }
     a[href]:after {
@@ -199,15 +191,13 @@ a:focus {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    a[href^="#"]:after, a[href^="javascript:"]:after {
         content: "";
     }
     pre {
         white-space: pre-wrap !important;
     }
-    pre,
-    blockquote {
+    pre, blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
@@ -218,18 +208,14 @@ a:focus {
     thead {
         display: table-header-group;
     }
-    tr,
-    img {
+    tr, img {
         page-break-inside: avoid;
     }
-    p,
-    h2,
-    h3 {
+    p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
-    h2,
-    h3 {
+    h2, h3 {
         page-break-after: avoid;
     }
 }
